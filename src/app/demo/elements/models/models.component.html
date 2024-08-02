@@ -1,0 +1,107 @@
+<div class="models-container">
+  <div class="navbar">
+    <span>{{ modelData.folderPath }}</span>
+  </div>
+  <div class="filter-container">
+    <ng-select
+      [items]="genderItems"
+      bindLabel="name"
+      bindValue="id"
+      placeholder="Filter by gender"
+      [(ngModel)]="selectedGender"
+      [searchable]="true"
+    ></ng-select>
+
+    <ng-select
+      [items]="countryItems"
+      bindLabel="name"
+      bindValue="id"
+      placeholder="Filter by country"
+      [(ngModel)]="selectedCountry"
+      [searchable]="true"
+    ></ng-select>
+
+    <ng-select
+      [items]="bodyTypeItems"
+      bindLabel="name"
+      bindValue="id"
+      placeholder="Filter by body type"
+      [(ngModel)]="selectedBodyType"
+      [searchable]="true"
+    ></ng-select>
+
+    <ng-select
+      [items]="skinColorItems"
+      bindLabel="name"
+      bindValue="id"
+      placeholder="Filter by skin color"
+      [(ngModel)]="selectedSkinColor"
+      [searchable]="true"
+    ></ng-select>
+
+    <ng-select
+      [items]="eyeColorItems"
+      bindLabel="name"
+      bindValue="id"
+      placeholder="Filter by eye color"
+      [(ngModel)]="selectedEyeColor"
+      [searchable]="true"
+    ></ng-select>
+
+    <button class="custom-button">
+      Filter
+      <span class="material-symbols-outlined"><mat-icon>add_circle</mat-icon></span>
+    </button>
+  </div>
+
+  <div class="model-card">
+    <div class="row">
+      <div class="col-md-4 model-image">
+        <img [src]="modelData.imageUrl" alt="Model Image" class="img-fluid generated-image" />
+      </div>
+      <div class="col-md-5 model-details">
+        <div class="model-name">
+          <h2>{{ modelData.name }}</h2>
+          <p>{{ modelData.country }}</p>
+          <span class="badge">Model</span>
+        </div>
+        <div class="skin-eye-color">
+          <div class="attribute">
+            <label>Skin Color</label>
+            <span class="value skin-color">{{ modelData.skinColor }}</span>
+          </div>
+          <div class="attribute">
+            <label>Eye Color</label>
+            <span class="value eye-color">{{ modelData.eyeColor }}</span>
+          </div>
+        </div>
+        <div class="body-image-type">
+          <div class="attribute">
+            <label>Body Type</label>
+            <span class="value body-type">{{ modelData.bodyType }}</span>
+            <p class="description">{{ modelData.bodyType.description }}</p>
+          </div>
+          <div class="attribute">
+            <label>Image Type</label>
+            <span class="value image-type">{{ modelData.imageType }}</span>
+            <p class="description">{{ modelData.imageType.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 model-extra">
+        <div class="model-clothing-type">
+          <p>{{ modelData.gender }}</p>
+          <div class="clothing-type-1">
+            <span>Clothing Type</span>
+            <p>{{ modelData.clothingType }}</p>
+          </div>
+          <p>{{ modelData.studio }}</p>
+        </div>
+        <div class="use-edit-btn">
+          <button class="submit-btn">Use</button>
+          <button class="submit-btn">Edit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

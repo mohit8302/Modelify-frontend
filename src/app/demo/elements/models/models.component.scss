@@ -1,0 +1,173 @@
+.models-container {
+  font-family: 'Jost', sans-serif;
+  padding: 20px;
+}
+
+.navbar {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.material-symbols-outlined {
+  margin-top: 5px;
+}
+
+.custom-button .material-symbols-outlined {
+  margin-left: 8px; /* Space between text and icon */
+  font-size: 20px; /* Icon size */
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
+}
+ng-select {
+  width: 180px; /* Set your desired width */
+}
+
+/* Custom Button */
+.custom-button {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  height: 40px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.custom-button .material-symbols-outlined {
+  margin-left: 5px;
+}
+
+.custom-button:hover {
+  background-color: #000000;
+}
+
+.model-card {
+  display: flex;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  align-items: flex-start;
+}
+
+.model-image img {
+  width: 100%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.model-details {
+  flex-grow: 1;
+  padding: 0 20px;
+}
+
+.model-details h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.model-details p,
+.model-extra p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: gray;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  background-color: lightgray;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.attribute {
+  margin-top: 20px;
+}
+
+.attribute label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.attribute .value {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 5px;
+  width: 130px;
+  font-size: 1rem;
+  color: white;
+}
+
+.skin-color {
+  background-color: #f0d5be;
+  color: black;
+}
+
+.eye-color {
+  background-color: #4682b4;
+}
+
+.body-type,
+.image-type {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  color: gray;
+  margin-top: 5px;
+}
+
+.model-extra {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.model-extra button {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 150px;
+  background-color: #222;
+  height: 40px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.model-extra button:hover {
+  background-color: white;
+  color: #222;
+}
+
+.skin-eye-color,
+.body-image-type,
+.model-clothing-type {
+  display: flex;
+  gap: 30px;
+}
+
+.use-edit-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}

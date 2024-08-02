@@ -1,0 +1,126 @@
+.file-upload-container {
+  font-family: 'Jost', sans-serif;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: border-color 0.3s;
+}
+
+.file-upload-container.dragover {
+  border-color: #000;
+}
+
+.upload-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+}
+.upload-message > p {
+  font-size: 25px;
+}
+.file-upload-container input[type='file'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* In your component CSS file */
+.custom-icon-size mat-icon {
+  font-size: 56px; /* Change this value to your desired size */
+  width: 56px; /* Ensure the width matches the font size */
+  height: 56px; /* Ensure the height matches the font size */
+}
+.uploaded-files-section {
+  font-family: 'Jost', sans-serif;
+  margin-top: 12px;
+  margin-left: 4px;
+}
+
+.uploaded-files {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.file-card {
+  border: 1px solid #efefef;
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  background-color: #efefef;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.uploaded-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.file-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #efefef;
+  padding: 20px 10px;
+  border-top: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.input-row input {
+  width: calc(50% - 5px);
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.tags-input {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.file-details button {
+  background-color: #c0ae92;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.file-details button:hover {
+  background-color: #b58f5b;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,391 @@
+<div class="row create-model">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h5>Create Model</h5>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <!-- First Column -->
+          <div class="col-sm-4">
+            <div class="gender-check-container">
+              <h3>Gender</h3>
+              <div class="container-gender-check">
+                <div class="form-check gender-check">
+                  <input type="radio" id="male" name="gender" value="male" />
+                  <label for="male" class="gender-label">Male</label>
+                </div>
+                <div class="form-check gender-check">
+                  <input type="radio" id="female" name="gender" value="female" />
+                  <label for="female" class="gender-label">Female</label>
+                </div>
+                <div class="form-check gender-check">
+                  <input type="radio" id="third-gender" name="gender" value="third-gender" />
+                  <label for="third-gender" class="gender-label">Third Gender</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="origin-country-container">
+              <h3>Country of Origin</h3>
+              <div class="container-origin-country">
+                <span><mat-icon>travel_explore</mat-icon></span>
+                <input
+                  type="text"
+                  class="origin-country-selector"
+                  [(ngModel)]="query"
+                  (input)="fetchCountries(query)"
+                  placeholder="Country of Origin"
+                />
+                <button type="button" class="clear-button" (click)="clearInput()">✖</button>
+                <ul id="suggestions" class="suggestions-list" *ngIf="suggestions.length">
+                  <li *ngFor="let country of suggestions" (click)="selectCountry(country)">
+                    {{ country }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="skin-color-container">
+              <h3>Skin Color</h3>
+              <div class="container-skin-color">
+                <div class="form-check skin-color-check">
+                  <input type="radio" id="fair-skin" name="skin-color" value="fair-skin" />
+                  <label for="fair-skin">
+                    Fair Skin
+                    <span class="color-box" style="background-color: #fbe7ce"></span>
+                  </label>
+                </div>
+                <div class="form-check skin-color-check">
+                  <input type="radio" id="light-skin" name="skin-color" value="light-skin" />
+                  <label for="light-skin">
+                    Light Skin
+                    <span class="color-box" style="background-color: #f3d4b6"></span>
+                  </label>
+                </div>
+                <div class="form-check skin-color-check">
+                  <input type="radio" id="medium-skin" name="skin-color" value="medium-skin" />
+                  <label for="medium-skin">
+                    Medium Skin
+                    <span class="color-box" style="background-color: #e0ac69"></span>
+                  </label>
+                </div>
+                <div class="form-check skin-color-check">
+                  <input type="radio" id="olive-skin" name="skin-color" value="olive-skin" />
+                  <label for="olive-skin">
+                    Olive Skin
+                    <span class="color-box" style="background-color: #c68642"></span>
+                  </label>
+                </div>
+                <div class="form-check skin-color-check">
+                  <input type="radio" id="brown-skin" name="skin-color" value="brown-skin" />
+                  <label for="brown-skin">
+                    Brown Skin
+                    <span class="color-box" style="background-color: #8d5524"></span>
+                  </label>
+                </div>
+                <div class="form-check skin-color-check">
+                  <input type="radio" id="dark-brown-skin" name="skin-color" value="dark-brown-skin" />
+                  <label for="dark-brown-skin">
+                    Dark Brown Skin
+                    <span class="color-box" style="background-color: #5c4033"></span>
+                  </label>
+                </div>
+                <div class="form-check skin-color-check">
+                  <input type="radio" id="black-skin" name="skin-color" value="black-skin" />
+                  <label for="black-skin">
+                    Black Skin
+                    <span class="color-box" style="background-color: #3b3024"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-body-type-main">
+              <h3>Body Type</h3>
+              <div class="container-body-type">
+                <div class="form-check body-type">
+                  <input type="radio" id="ectomorph" name="body-type" value="ectomorph" />
+                  <label for="ectomorph" class="body-type-label">
+                    <strong>Ectomorph</strong>
+                    <p>Narrow shoulders and hips, fast metabolism, low body fat, slim appearance.</p>
+                  </label>
+                </div>
+                <div class="form-check body-type">
+                  <input type="radio" id="mesomorph" name="body-type" value="mesomorph" />
+                  <label for="mesomorph" class="body-type-label">
+                    <strong>Mesomorph</strong>
+                    <p>Broad shoulders, narrow waist, good muscle definition, can gain or lose weight easily.</p>
+                  </label>
+                </div>
+                <div class="form-check body-type">
+                  <input type="radio" id="endomorph" name="body-type" value="endomorph" />
+                  <label for="endomorph" class="body-type-label">
+                    <strong>Endomorph</strong>
+                    <p>Straight silhouette, less defined waist, uniform weight distribution.</p>
+                  </label>
+                </div>
+                <div class="form-check body-type">
+                  <input type="radio" id="triangle" name="body-type" value="triangle" />
+                  <label for="triangle" class="body-type-label">
+                    <strong>Triangle</strong>
+                    <p>Narrow shoulders, wider hips, defined waist, weight tends to accumulate in the lower body.</p>
+                  </label>
+                </div>
+                <div class="form-check body-type">
+                  <input type="radio" id="inverted-triangle" name="body-type" value="inverted-triangle" />
+                  <label for="inverted-triangle" class="body-type-label">
+                    <strong>Inverted Triangle</strong>
+                    <p>Broad shoulders, larger bust, narrower hips, weight tends to accumulate in the midsection.</p>
+                  </label>
+                </div>
+                <div class="form-check body-type">
+                  <input type="radio" id="athletic" name="body-type" value="athletic" />
+                  <label for="athletic" class="body-type-label">
+                    <strong>Athletic</strong>
+                    <p>Straight silhouette, less defined waist, uniform weight distribution.</p>
+                  </label>
+                </div>
+                <div class="form-check body-type">
+                  <input type="radio" id="oval" name="body-type" value="oval" />
+                  <label for="oval" class="body-type-label">
+                    <strong>Oval</strong>
+                    <p>Broad waist, wider than bust and hips, softer body lines.</p>
+                  </label>
+                </div>
+                <div class="form-check body-type">
+                  <input type="radio" id="diamond" name="body-type" value="diamond" />
+                  <label for="diamond" class="body-type-label">
+                    <strong>Diamond</strong>
+                    <p>Fuller midsection, narrower at bust and hips, less defined waist.</p>
+                  </label>
+                </div>
+                <div class="form-check body-type">
+                  <input type="radio" id="hourglass" name="body-type" value="hourglass" />
+                  <label for="hourglass" class="body-type-label">
+                    <strong>Hourglass</strong>
+                    <p>Bust and hips are approximately the same width, narrow waist, proportionate figure.</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Column -->
+
+          <div class="col-sm-4">
+            <div class="image-type-container">
+              <h3>Image Type</h3>
+              <div class="container-image-type">
+                <div class="form-check body-image-type">
+                  <input type="radio" id="full-body" name="image-type" value="full-body" />
+                  <label for="full-body" class="image-type-label">
+                    <strong>Full Body</strong>
+                    <p>A person standing in a neutral pose, showing their full height and entire body shape..</p>
+                  </label>
+                </div>
+                <div class="form-check body-image-type">
+                  <input type="radio" id="half-body" name="image-type" value="half-body" />
+                  <label for="half-body" class="image-type-label">
+                    <strong>Half Body</strong>
+                    <p>A person seated or standing, visible from the waist to the top of the head.</p>
+                  </label>
+                </div>
+                <div class="form-check body-image-type">
+                  <input type="radio" id="three-quarter" name="image-type" value="three-quarter" />
+                  <label for="three-quarter" class="image-type-label">
+                    <strong>Three Quarter</strong>
+                    <p>A person standing or sitting with visibility from the knees to the top of the head.</p>
+                  </label>
+                </div>
+                <div class="form-check body-image-type">
+                  <input type="radio" id="close-up" name="image-type" value="close-up" />
+                  <label for="close-up" class="image-type-label">
+                    <strong>Close-Up</strong>
+                    <p>A person's face and shoulders filling the frame, often used to highlight facial features.</p>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more image types similarly -->
+
+            <div class="container-clothing-type-main">
+              <h3>Clothing Type</h3>
+              <div class="clothing-type-container">
+                <div class="clothing-type">
+                  <input type="radio" id="t-shirt" name="clothing-type" />
+                  <label for="t-shirt">T-Shirt</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="polo" name="clothing-type" />
+                  <label for="polo">Polo</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="dress" name="clothing-type" />
+                  <label for="dress">Dress</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="sweaters" name="clothing-type" />
+                  <label for="sweaters">Sweaters</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="henley" name="clothing-type" />
+                  <label for="henley">Henley</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="jeans" name="clothing-type" />
+                  <label for="jeans">Jeans</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="chinos" name="clothing-type" />
+                  <label for="chinos">Chinos</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="shorts" name="clothing-type" />
+                  <label for="shorts">Shorts</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="joggers" name="clothing-type" />
+                  <label for="joggers">Joggers</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="suits" name="clothing-type" />
+                  <label for="suits">Suits</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="tuxedos" name="clothing-type" />
+                  <label for="tuxedos">Tuxedos</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="blazers" name="clothing-type" />
+                  <label for="blazers">Blazers</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="jackets" name="clothing-type" />
+                  <label for="jackets">Jackets</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="coats" name="clothing-type" />
+                  <label for="coats">Coats</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="sweatshirt" name="clothing-type" />
+                  <label for="sweatshirt">Sweatshirt</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="vests" name="clothing-type" />
+                  <label for="vests">Vests</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="sneakers" name="clothing-type" />
+                  <label for="sneakers">Sneakers</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="boots" name="clothing-type" />
+                  <label for="boots">Boots</label>
+                </div>
+                <div class="clothing-type">
+                  <input type="radio" id="sandals" name="clothing-type" />
+                  <label for="sandals">Sandals</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more clothing types similarly -->
+
+            <textarea placeholder="Describe the clothing..."></textarea>
+
+            <div class="eye-color-container-main">
+              <h3>Eye Color</h3>
+              <div class="container-eye-color">
+                <div class="skin-eye-color" style="--color: #654321">
+                  <input type="radio" id="brown" name="eye-color" value="brown" />
+                  <label for="brown">
+                    Brown
+                    <div class="color-box" style="background-color: #654321"></div>
+                  </label>
+                </div>
+                <div class="skin-eye-color" style="--color: #4682b4">
+                  <input type="radio" id="blue" name="eye-color" value="blue" />
+                  <label for="blue">
+                    Blue
+                    <div class="color-box" style="background-color: #4682b4"></div>
+                  </label>
+                </div>
+                <div class="skin-eye-color" style="--color: #008000">
+                  <input type="radio" id="green" name="eye-color" value="green" />
+                  <label for="green">
+                    Green
+                    <div class="color-box" style="background-color: #008000"></div>
+                  </label>
+                </div>
+                <div class="skin-eye-color" style="--color: #8b4513">
+                  <input type="radio" id="hazel" name="eye-color" value="hazel" />
+                  <label for="hazel">
+                    Hazel
+                    <div class="color-box" style="background-color: #8b4513"></div>
+                  </label>
+                </div>
+                <div class="skin-eye-color" style="--color: #ffbf00">
+                  <input type="radio" id="amber" name="eye-color" value="amber" />
+                  <label for="amber">
+                    Amber
+                    <div class="color-box" style="background-color: #ffbf00"></div>
+                  </label>
+                </div>
+                <div class="skin-eye-color" style="--color: #bebebe">
+                  <input type="radio" id="gray" name="eye-color" value="gray" />
+                  <label for="gray">
+                    Gray
+                    <div class="color-box" style="background-color: #bebebe"></div>
+                  </label>
+                </div>
+                <div class="skin-eye-color" style="--color: #ee82ee">
+                  <input type="radio" id="violet" name="eye-color" value="violet" />
+                  <label for="violet">
+                    Violet
+                    <div class="color-box" style="background-color: #ee82ee"></div>
+                  </label>
+                </div>
+                <div class="skin-eye-color" style="--color: #00008b">
+                  <input type="radio" id="heterochromia" name="eye-color" value="heterochromia" />
+                  <label for="heterochromia">
+                    Heterochromia
+                    <div class="color-box" style="background-color: #00008b"></div>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more eye colors similarly -->
+          </div>
+
+          <!-- Third Column -->
+          <div class="col-sm-4 text-center">
+            <img [src]="imageUrl" alt="Generated Image" class="img-fluid generated-image" height="1000px" />
+
+            <div class="image-btn">
+              <input type="radio" id="studio" name="image-type" value="studio" />
+              <label for="studio" class="btn img-btn btn-studio">Studio</label>
+
+              <input type="radio" id="landscape" name="image-type" value="landscape" />
+              <label for="landscape" class="btn img-btn btn-landscape">Landscape</label>
+
+              <input type="radio" id="cityscape" name="image-type" value="cityscape" />
+              <label for="cityscape" class="btn img-btn btn-cityscape">Cityscape</label>
+            </div>
+            <div class="submit-btn">
+              <div class="save-btn">
+                <button class="btn-save">Save</button>
+              </div>
+              <div class="gen-btn">
+                <button class="btn-generate">Generate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

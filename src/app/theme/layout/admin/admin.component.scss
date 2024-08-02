@@ -1,0 +1,12 @@
+/* In styles.css or app-navigation.component.css */
+.custom-navbar {
+  background-color: #f1f1f1; /* Change this to your desired color */
+  color: white; /* Change the text color if needed */
+  /* Add more styles as needed */
+}
+
+/* In styles.css or app-navigation.component.css */
+.coded-navbar.pc-sidebar.custom-navbar {
+  background-color: #f1f1f1 !important;
+  color: white !important;
+}

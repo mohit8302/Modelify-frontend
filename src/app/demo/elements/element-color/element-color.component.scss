@@ -1,0 +1,234 @@
+.main-body {
+  font-family: 'Jost', sans-serif;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.gender-container-main,
+.container-clothing-type-main,
+.text-area,
+.submit-btn {
+  margin-bottom: 20px;
+}
+.container-gender {
+  margin-left: -20px;
+}
+
+.gender-check,
+.clothing-type {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.submit-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-save,
+.btn-generate {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-gender-check {
+  margin-top: 15px;
+  margin-left: -18px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 350px; /* Adjust this width as needed */
+  gap: 10px;
+}
+
+.gender-check {
+  flex: 1 1 45%; /* This makes each item take up roughly 45% of the container width to accommodate the gap */
+  margin-bottom: 10px; /* Add some spacing between rows */
+}
+
+.gender-check:nth-child(3) {
+  flex: 1 1 100%; /* Ensuring the third gender radio button takes the full width */
+}
+
+.gender-check input[type='radio'] {
+  display: none;
+}
+
+.gender-check input[type='radio'] + .gender-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start; /* Ensure the text is aligned properly */
+  width: 150px; /* Set desired width */
+  height: 40px; /* Set desired height */
+  cursor: pointer;
+  font-size: 16px;
+  border: 2px solid #000;
+  margin: -4px;
+  border-radius: 5px;
+  padding-left: 10px; /* Adjust padding to your preference */
+  box-sizing: border-box;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.gender-check input[type='radio']:checked + .gender-label {
+  border-color: black;
+  color: black;
+  background-color: #ffffff;
+}
+
+.gender-check input[type='radio'] + .gender-label::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  margin-right: 8px;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+.gender-check input[type='radio']:checked + .gender-label::before {
+  content: '\2713'; /* Unicode character for checkmark */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.gender-label:hover {
+  border-color: black;
+}
+
+/* Adjust alignment for two rows */
+.gender-check:nth-child(1),
+.gender-check:nth-child(2) {
+  width: calc(50% - 20px); /* Adjust for two items in the first row */
+}
+
+.gender-check:nth-child(3) {
+  width: calc(100% - 20px); /* Adjust for the third item in the second row */
+}
+
+.container-clothing-type-main {
+  font-family: 'Jost', sans-serif; /* Using your preferred font */
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.container-clothing-type-main h3 {
+  white-space: nowrap; /* Prevent the text from wrapping to a new line */
+  font-size: 1.5em; /* Adjust font size as needed */
+  margin: 0; /* Remove default margins if necessary */
+  padding: 0; /* Remove default padding if necessary */
+}
+
+.clothing-type-container {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 10px; /* Space between items */
+  max-width: 400px;
+}
+
+.clothing-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clothing-type input[type='radio'] {
+  display: none; /* Hide the radio button */
+}
+
+.clothing-type label {
+  display: inline-block;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.clothing-type input[type='radio']:checked + label {
+  background-color: #4a4a4a; /* Darker background for selected item */
+  color: white;
+  border-color: #4a4a4a;
+}
+
+///text area css
+textarea {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  resize: none;
+  width: 360px;
+  height: 80px;
+}
+
+.submit-text {
+  display: flex;
+  justify-content: flex-end;
+  width: 355px;
+  font-weight: bolder;
+}
+
+.submit-btn {
+  display: flex;
+  margin-top: 30px;
+  margin-top: -1px;
+  gap: 10px; /* Space between buttons */
+}
+
+.save-btn .btn-save,
+.gen-btn .btn-generate {
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 170px;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.save-btn .btn-save:hover,
+.gen-btn .btn-generate:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.save-btn .btn-save:active,
+.gen-btn .btn-generate:active {
+  background-color: #000;
+  color: #fff;
+}

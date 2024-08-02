@@ -1,0 +1,30 @@
+<div class="file-upload-container" (dragover)="onDragOver($event)" (dragleave)="onDragLeave($event)" (drop)="onDrop($event)">
+  <div class="upload-message">
+    <span class="custom-icon-size"><mat-icon>folder</mat-icon></span>
+    <p>
+      Drag and Drop
+      <br />
+      files / folders
+    </p>
+  </div>
+  <input type="file" (change)="onFileSelected($event)" multiple />
+</div>
+
+<div class="uploaded-files-section" *ngIf="files.length > 0">
+  <h2>Uploaded</h2>
+  <div class="uploaded-files">
+    <div class="file-card" *ngFor="let file of files">
+      <div class="image-section">
+        <img [src]="file.url" alt="Uploaded image" class="uploaded-image" />
+      </div>
+      <div class="file-details">
+        <div class="input-row">
+          <input type="text" placeholder="Clothing name" [(ngModel)]="file.clothingName" />
+          <input type="text" placeholder="Folder" [(ngModel)]="file.folder" />
+        </div>
+        <input type="text" placeholder="Tags" [(ngModel)]="file.tags" class="tags-input" />
+        <button (click)="saveDetails(file)">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

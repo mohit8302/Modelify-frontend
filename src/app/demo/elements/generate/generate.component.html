@@ -1,0 +1,91 @@
+<div class="products-container">
+  <h2>Product</h2>
+  <div class="search-container">
+    <input type="text" placeholder="Search products" [(ngModel)]="searchQuery" (input)="onSearch()" />
+  </div>
+  <div class="cards-container">
+    <div class="card" *ngFor="let profile of profiles">
+      <div class="card-content">
+        <img [src]="imageUrl" alt="Profile" class="profile-image" />
+        <div class="details">
+          <h3>{{ profile.name }}</h3>
+          <p>{{ profile.description }}</p>
+        </div>
+        <div class="status" *ngIf="profile.isSelected">Selected</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="models-container">
+  <div *ngFor="let model of models" class="model-card">
+    <div class="row">
+      <div class="col-md-4 model-image">
+        <img [src]="model.imageUrl" alt="Model Image" class="img-fluid generated-image" />
+      </div>
+      <div class="col-md-5 model-details">
+        <div class="model-name">
+          <h2>{{ model.name }}</h2>
+          <p>{{ model.country }}</p>
+          <span class="badge">Model</span>
+        </div>
+
+        <div class="skin-eye-color">
+          <div class="attribute">
+            <label>Skin Color</label>
+            <span class="value skin-color">{{ model.skinColor }}</span>
+          </div>
+          <div class="attribute">
+            <label>Eye Color</label>
+            <span class="value eye-color">{{ model.eyeColor }}</span>
+          </div>
+        </div>
+        <div class="body-image-type-container">
+          <div class="body-type">
+            <label>Body Type</label>
+            <span class="value body-type-value">{{ model.bodyType }}</span>
+          </div>
+          <div class="image-type">
+            <label>Image Type</label>
+            <span class="value body-type-value">{{ model.imageType }}</span>
+          </div>
+        </div>
+        <div class="use-button">
+          <button>Use</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="garment-container-main">
+  <h1>Garments</h1>
+  <div class="garment-container">
+    <div class="garment-card" *ngFor="let garment of garments">
+      <div class="image-section">
+        <img [src]="garment.imageUrl" alt="{{ garment.title }}" />
+        <span class="badge">AI Generated</span>
+      </div>
+      <div class="details-section">
+        <p class="breadcrumb">{{ garment.breadcrumb }}</p>
+        <h2>{{ garment.title }}</h2>
+        <div class="tags">
+          <span *ngFor="let tag of garment.tags" class="tag">{{ tag }}</span>
+        </div>
+        <button>Use</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="generated-button-container">
+  <button class="generated-button">Generate</button>
+</div>
+
+<div class="result-container">
+  <h2>results</h2>
+  <div class="results">
+    <img [src]="imageUrl1" alt="Profile" class="result-image" />
+    <img [src]="imageUrl1" alt="Profile" class="result-image" />
+    <img [src]="imageUrl1" alt="Profile" class="result-image" />
+  </div>
+</div>

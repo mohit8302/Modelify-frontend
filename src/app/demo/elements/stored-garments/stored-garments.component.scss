@@ -1,0 +1,190 @@
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+.folder-section {
+  margin: 20px;
+}
+
+.folder-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 50px;
+}
+
+.folder-button {
+  display: flex;
+  align-items: center;
+  width: 13.8rem;
+  padding: 10px 20px;
+  border: 1px solid #bebebe;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Jost', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #bebebe;
+  transition: background-color 0.3s ease;
+}
+
+.folder-button:hover {
+  background-color: #f0f0f0;
+}
+
+.folder-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.folder-name {
+  font-size: 16px;
+  margin-top: -4px;
+  margin-left: 5px;
+}
+
+.garments-section {
+  margin: 20px;
+  margin-top: 40px;
+}
+
+.garments {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.garment-card {
+  border: 1px solid #efefef;
+  padding: 10px;
+  width: 200px;
+  background-color: #efefef;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.garment-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.garment-details {
+  text-align: left;
+}
+
+.garment-name {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.garment-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background-color: #ccc;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+}
+
+.edit-button,
+.change-button {
+  background-color: #af9d7f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.edit-button:hover,
+.change-button:hover {
+  background-color: #a48e67;
+}
+
+.edit-button {
+  background-color: #af9d7f;
+}
+
+.edit-button:hover {
+  background-color: #a48e67;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 20px;
+}
+
+.image-section {
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-details {
+  background-color: #efefef;
+  padding: 20px;
+}
+
+.breadcrumbs {
+  font-size: 14px;
+  color: #888888;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tags span {
+  background-color: #dddddd;
+  border-radius: 16px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.change-button {
+  background-color: #c0a174;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.change-button:hover {
+  background-color: #a4865b;
+}

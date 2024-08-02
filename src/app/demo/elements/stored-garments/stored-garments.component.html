@@ -1,0 +1,53 @@
+<div class="folder-section">
+  <h2>Folder</h2>
+  <div class="folder-buttons">
+    <div class="folder-button">
+      <span class="custom-icon-size"><mat-icon>folder</mat-icon></span>
+      <span class="folder-name">Summer 2024</span>
+    </div>
+    <div class="folder-button">
+      <span class="custom-icon-size"><mat-icon>folder</mat-icon></span>
+      <span class="folder-name">Winter 2024</span>
+    </div>
+    <div class="folder-button">
+      <span class="custom-icon-size"><mat-icon>folder</mat-icon></span>
+      <span class="folder-name">Winter 2023</span>
+    </div>
+    <div class="folder-button">
+      <span class="custom-icon-size"><mat-icon>folder</mat-icon></span>
+      <span class="folder-name">Spring 2023</span>
+    </div>
+  </div>
+</div>
+<!-- <div class="garments-section">
+  <h2>Garments</h2>
+  <div class="garments">
+    <div class="garment-card" *ngFor="let garment of garments">
+      <img [src]="garment.imageUrl" alt="Garment image" class="garment-image" />
+      <div class="garment-details">
+        <p class="garment-name">{{ garment.name }}</p>
+        <div class="garment-tags">
+          <span class="tag" *ngFor="let tag of garment.tags">{{ tag }}</span>
+        </div>
+        <button class="edit-button">Edit</button>
+        <button class="change-button">Change</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="card-container">
+  <div class="image-section" *ngFor="let garment of garments">
+    <img [src]="garment.imageUrl" alt="Garment image" class="garment-image" />
+  </div>
+  <div class="card-details">
+    <div class="breadcrumbs">/Summer/Men/T-Shirts</div>
+    <h2>Summer 2024 T-Shirt</h2>
+    <div class="tags">
+      <span>T-shirts</span>
+      <span>Summer</span>
+      <span>2023</span>
+    </div>
+    <button class="change-button">Change</button>
+  </div>
+</div>
