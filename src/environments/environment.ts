@@ -5,6 +5,7 @@
 import packageInfo from '../../package.json';
 
 export const environment = {
+  url: process.env['NG_APP_BASE_URL'],
   appVersion: packageInfo.version,
   production: false
 };
