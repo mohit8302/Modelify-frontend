@@ -140,61 +140,62 @@
     }
   }
 
-  .skin-color-container {
+  ///
+  ///
+  /// skin and eye-color container
+
+  .color-container {
     margin-bottom: 20px;
+  }
 
-    .container-skin-color {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      max-width: 100%;
-      margin: 0 auto;
+  .color-container .container-color {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 
-      .skin-color-check {
-        padding-left: 0;
-      }
+  .color-container .color input[type='radio'] {
+    display: none;
+  }
 
-      .skin-color-check input[type='radio'] {
-        display: none;
-      }
+  .color-container .color label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border: 1px solid var(--color, #291e1e);
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--color, #a52a2a);
+    background-color: transparent;
+  }
 
-      .skin-color-check label {
-        width: 100%;
-        height: 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-        background-color: #ffffff;
-        padding: 10px;
-        border-radius: 5px;
-        text-align: center;
-        border: 1px solid black;
-        position: relative;
-      }
+  .color-container .color input[type='radio']:checked + label {
+    background-color: var(--color, #f5f5f5);
+    color: #fff;
+  }
 
-      .skin-color-check label .color-box {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        background-color: inherit;
-      }
+  .color-container .color input[type='radio']:checked + label .color-box {
+    background-color: #fff;
+    border-color: #fff;
+  }
 
-      .skin-color-check input[type='radio']:checked + label {
-        background-color: #3e3c3c;
-        color: rgb(255, 242, 242);
-        border: 2px solid black;
-      }
-    }
+  .color-container .color-box {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    border-radius: 3px;
+    border: 1px solid var(--color, #a52a2a);
   }
 
   .body-type-container {
     margin-bottom: 20px;
 
-    .container-body-type {
-      display: flex;
-      flex-direction: column;
-    }
     .container-body-type {
       display: flex;
       flex-direction: column;
@@ -328,55 +329,6 @@
       width: 100%;
       height: 80px;
       border-radius: 5px;
-    }
-  }
-
-  .eye-color-container {
-    margin-bottom: 20px;
-
-    .container-eye-color {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      max-width: 100%;
-      margin: 0 auto;
-
-      .eye-color input[type='radio'] {
-        display: none;
-      }
-
-      .eye-color label {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px 15px;
-        border: 1px solid var(--color, #291e1e);
-        border-radius: 5px;
-        cursor: pointer;
-        width: 100%;
-        box-sizing: border-box;
-        color: var(--color, #a52a2a);
-        background-color: transparent;
-      }
-
-      .eye-color input[type='radio']:checked + label {
-        background-color: var(--color, #f5f5f5);
-        color: #fff;
-      }
-
-      .eye-color input[type='radio']:checked + label .color-box {
-        background-color: #fff;
-        border-color: #fff;
-      }
-
-      .color-box {
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        margin-left: 10px;
-        border-radius: 3px;
-        border: 1px solid var(--color, #a52a2a);
-      }
     }
   }
 
