@@ -1,0 +1,86 @@
+.container {
+  margin: 20px;
+  max-width: 800px;
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  box-shadow: none;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.search-container input:focus {
+  border-color: #888;
+}
+
+.card-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 40px;
+}
+
+.card {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #a5a5a5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.export-button {
+  background-color: #d9d9d9;
+  border: none;
+  color: #7b7b7b;
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.export-button:hover {
+  background-color: #ccc;
+}

@@ -1,0 +1,26 @@
+<div id="modal-overlay" class="modal-overlay">
+  <div class="modal-content">
+    <h2 class="mat-dialog-title">Save Garment Modal</h2>
+
+    <label for="clothing-name">Clothing name</label>
+    <input id="clothing-name" type="text" />
+
+    <label for="folder-name">Folder Name</label>
+    <div class="tags">
+      <span>/Summer/Men/T-Shirts</span>
+      <button mat-button>Add Folder</button>
+    </div>
+
+    <label>Tags</label>
+    <div class="tags">
+      <div class="tag-item">
+        T-shirts
+        <span class="remove-tag">x</span>
+      </div>
+    </div>
+
+    <div class="mat-dialog-actions">
+      <button mat-button (click)="closeModal()">Save</button>
+    </div>
+  </div>
+</div>

@@ -111,6 +111,14 @@ const NavigationItems = [
         url: '/generate',
         classes: 'nav-item',
         icon: 'ti ti-vocabulary'
+      },
+      {
+        id: 'document',
+        title: 'Stored Images',
+        type: 'item',
+        url: '/stored-images',
+        classes: 'nav-item',
+        icon: 'ti ti-vocabulary'
       }
     ]
   }

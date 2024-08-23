@@ -3,7 +3,7 @@ body {
 }
 
 .folder-section {
-  margin: 20px;
+  margin-bottom: 20px;
 }
 
 .folder-buttons {
@@ -15,11 +15,12 @@ body {
 .folder-button {
   display: flex;
   align-items: center;
-  width: 13.8rem;
+  width: 12.2rem;
+  height: 55px;
   padding: 10px 20px;
   border: 1px solid #bebebe;
   background-color: #f9f9f9;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   font-family: 'Jost', sans-serif;
   font-size: 16px;
@@ -32,16 +33,9 @@ body {
   background-color: #f0f0f0;
 }
 
-.folder-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-}
-
 .folder-name {
   font-size: 16px;
-  margin-top: -4px;
-  margin-left: 5px;
+  margin-left: 18px;
 }
 
 .garments-section {
@@ -68,10 +62,6 @@ body {
 .garment-image {
   width: 100%;
   height: 200px;
-  object-fit: cover;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
-  margin-bottom: 10px;
 }
 
 .garment-details {
@@ -90,13 +80,6 @@ body {
   margin-bottom: 10px;
 }
 
-.tag {
-  background-color: #ccc;
-  padding: 3px 8px;
-  border-radius: 12px;
-  font-size: 12px;
-}
-
 .edit-button,
 .change-button {
   background-color: #af9d7f;
@@ -105,8 +88,8 @@ body {
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
-  width: 100%;
   margin-top: 10px;
+  float: right;
 }
 
 .edit-button:hover,
@@ -128,14 +111,13 @@ body {
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 300px;
-  margin: 20px;
+  margin: 7px;
 }
 
 .image-section {
+  border-radius: 8px;
   background-color: #efefef;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -150,6 +132,9 @@ body {
 .card-details {
   background-color: #efefef;
   padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 8px;
 }
 
 .breadcrumbs {
@@ -164,9 +149,12 @@ h2 {
 }
 
 .tags {
-  display: flex;
   gap: 10px;
-  margin-bottom: 10px;
+}
+
+.ai-generated-tag {
+  background-color: #af9d7f !important;
+  color: white;
 }
 
 .tags span {
@@ -174,13 +162,14 @@ h2 {
   border-radius: 16px;
   padding: 5px 10px;
   font-size: 12px;
+  margin: 2px;
 }
 
 .change-button {
   background-color: #c0a174;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 4px;
   cursor: pointer;
 }

@@ -1,34 +1,26 @@
-body {
-  font-family: 'Jost', sans-serif;
+.folder-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .folder-section {
-  margin: 20px;
-}
-
-.folder-buttons {
-  margin-top: 20px;
   display: flex;
-  gap: 50px;
-}
-
-.folder-button {
-  display: flex;
-  align-items: center;
-  width: 13.8rem;
+  align-items: left;
   padding: 10px 20px;
+  margin-bottom: 20px;
   border: 1px solid #bebebe;
   background-color: #f9f9f9;
   border-radius: 8px;
-  cursor: pointer;
-  font-family: 'Jost', sans-serif;
-  font-size: 16px;
   font-weight: 500;
   color: #bebebe;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.folder-button:hover {
+.folder-section:hover {
   background-color: #f0f0f0;
 }
 
@@ -40,6 +32,4 @@ body {
 
 .folder-name {
   font-size: 16px;
-  margin-top: -4px;
-  margin-left: 8px;
 }

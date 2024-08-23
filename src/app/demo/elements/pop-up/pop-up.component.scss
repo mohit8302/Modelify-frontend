@@ -1,0 +1,107 @@
+/* Modal content container */
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  width: 400px;
+  max-width: 90%;
+}
+
+/* Modal title */
+.mat-dialog-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #999999; /* Gray color for the title */
+}
+
+/* Labels for the input fields */
+label {
+  font-size: 18px; /* Slightly larger font size */
+  font-weight: 500;
+  color: #000000; /* Black color */
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Input fields styling */
+input[type='text'] {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px; /* Larger font size for input */
+  border: 2px solid #000000; /* 2px solid black border */
+  border-radius: 4px;
+  margin-bottom: 16px;
+  color: #000000; /* Black text color */
+}
+
+/* Add Folder button */
+button[mat-button] {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  color: #000000; /* Black color */
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Tags input styling */
+.tags {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: 2px solid #000000; /* 2px solid black border */
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f1f1f1; /* Light gray background */
+  margin-bottom: 16px;
+}
+
+.tag-item {
+  margin-right: 8px;
+  background-color: #cccccc; /* Gray color */
+  border-radius: 16px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.remove-tag {
+  margin-left: 4px;
+  cursor: pointer;
+  color: #000000; /* Black color */
+}
+
+/* Save button styling */
+.mat-dialog-actions button[mat-button] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: none;
+  color: #ffffff; /* White text color */
+  background-color: #000000; /* Black background */
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect on Save button */
+.mat-dialog-actions button[mat-button]:hover {
+  background-color: #333333; /* Darker black on hover */
+}
+
+/* Prevent body scrolling when modal is open */
+body.modal-open {
+  overflow: hidden;
+}

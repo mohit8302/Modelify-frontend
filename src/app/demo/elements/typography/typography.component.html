@@ -30,11 +30,16 @@
               class="origin-country-selector"
               [(ngModel)]="query"
               (input)="fetchCountries(query)"
+              (keydown)="handleKeyDown($event)"
               placeholder="Country of Origin"
             />
             <button type="button" class="clear-button" (click)="clearInput()">✖</button>
             <ul id="suggestions" class="suggestions-list" *ngIf="suggestions.length">
-              <li *ngFor="let country of suggestions" (click)="selectCountry(country)">
+              <li
+                *ngFor="let country of suggestions; let i = index"
+                [class.highlighted]="i === highlightedIndex"
+                (click)="selectCountry(country)"
+              >
                 {{ country }}
               </li>
             </ul>
@@ -95,7 +100,6 @@
             </div>
           </div>
         </div>
-
         <div class="body-type-container">
           <h3>Body Type</h3>
           <div class="container-body-type">
@@ -367,7 +371,11 @@
         </div>
 
         <div class="submit-btn-container">
-          <button class="btn-save">Save</button>
+          <button type="button" class="btn-save" (click)="openModal()">Save</button>
+          <div *ngIf="isModalOpen" class="custom-modal">
+            <app-pop-up></app-pop-up>
+          </div>
+
           <button class="btn-generate">Generate</button>
         </div>
       </div>

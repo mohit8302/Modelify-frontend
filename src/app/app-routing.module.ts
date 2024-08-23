@@ -48,6 +48,10 @@ const routes: Routes = [
       {
         path: 'generate',
         loadComponent: () => import('./demo/elements/generate/generate.component')
+      },
+      {
+        path: 'stored-images',
+        loadComponent: () => import('./demo/elements/stored-images/stored-images.component')
       }
     ]
   },

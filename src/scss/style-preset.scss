@@ -8,6 +8,7 @@ File: style.css
 =================================================================================== */
 
 // main framework
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&display=swap');
 @import 'settings/color-variables';
 @import 'node_modules/bootstrap/scss/functions';
 @import 'node_modules/bootstrap/scss/variables';
@@ -33,41 +34,31 @@ File: style.css
 
     // Styles for nav-link
     .nav-link {
-      color: #6f6f6f; /* Desired text color */
-      background-color: #f1f1f1; /* Desired background color */
-      border-radius: 5px; /* Add border-radius for rounded corners */
-      margin-bottom: 10px; /* Add margin for spacing between links */
+      color: #6f6f6f; // Text color
+      background-color: #f1f1f1; // Background color of the nav element
+      border: 1px solid #c8c8c8; // Border color of the nav element
+      border-radius: 10px; // Optional: round the corners
+      margin-bottom: 10px; // Optional: space between the elements
+      display: block;
+      font-size: 16px;
+      height: 48px; // Padding inside each nav element
+      text-decoration: none; // Remove underline from links
 
-      &:hover,
-      &:focus {
-        color: #c8c8c8; /* Desired hover text color */
-        background-color: #6e6e6e; /* Desired hover background color */
+      &:hover {
+        background-color: #6e6e6e; // Background color on hover
+        color: #c8c8c8;
+        border: 1px solid #6e6e6e; // Text color on hover
       }
     }
-
     // Styles for active nav-link
     .nav-link.active {
-      background-color: #6e6e6e; /* Same as hover background color */
-      color: #c8c8c8; /* Same as hover text color */
+      background-color: #6e6e6e; // Active background color
+      color: #c8c8c8;
+      border: 1px solid #6e6e6e; // Active text color
     }
 
     .pc-container {
       background: $pc-body;
-    }
-
-    .pc-sidebar .nav-link {
-      color: #c8c8c8 !important; /* Ensure the text color is applied */
-    }
-
-    .pc-sidebar .nav-link:hover,
-    .pc-sidebar .nav-link:focus {
-      color: #c8c8c8 !important; /* Ensure hover and focus text color is applied */
-      background-color: #6e6e6e !important; /* Ensure hover and focus background color is applied */
-    }
-
-    .pc-sidebar .nav-link.active {
-      color: #c8c8c8 !important; /* Ensure active text color is applied */
-      background-color: #6e6e6e !important; /* Ensure active background color is applied */
     }
 
     .pc-sidebar {
@@ -211,15 +202,15 @@ File: style.css
 
     @each $color, $value in $pctheme-colors {
       .pc-header .pc-head-link.head-link-#{$color} {
-        background: shift-color($value, $soft-bg-level);
-        color: $value;
+        // background: shift-color($value, $soft-bg-level);
+        // color: $value;
 
         > i {
           color: $value;
         }
 
         &:hover {
-          background: $value;
+          // background: $value;
           color: #fff;
 
           > i {
@@ -233,11 +224,11 @@ File: style.css
       }
 
       .bg-#{$color} {
-        background-color: $value !important;
+        // background-color: $value !important;
       }
 
       .bg-light-#{$color} {
-        background: shift-color($value, $soft-bg-level);
+        // background: shift-color($value, $soft-bg-level);
         color: $value;
       }
 

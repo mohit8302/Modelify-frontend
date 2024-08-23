@@ -3,7 +3,7 @@
 // ============================
 
 .pc-header {
-  background: $header-background;
+  // background: $header-background;
   color: $header-color;
   min-height: $header-height;
   position: fixed;
@@ -39,7 +39,7 @@
     .form-control {
       border-radius: $border-radius;
       padding: 0.813rem 3rem 0.813rem 3rem;
-      width: 434px;
+      width: 300px;
       max-width: 100%;
 
       @media (max-width: 1024px) {
@@ -85,7 +85,7 @@
   }
 
   .pc-head-link {
-    color: $header-color;
+    // color: $header-color;
     margin: 0 16px;
     position: relative;
     font-weight: 500;
@@ -100,15 +100,15 @@
     @each $color, $value in $theme-colors {
       @if ($color == 'primary' or $color == 'secondary') {
         &.head-link-#{$color} {
-          background: shift-color($value, $soft-bg-level);
-          color: $value;
+          // /background: shift-color($value, $soft-bg-level);
+          //color: $value;
 
           > i {
-            color: $value;
+            //  color: $value;
           }
 
           &:hover {
-            background: $value;
+            // background: $value;
 
             color: #fff;
 
@@ -135,8 +135,8 @@
     &:focus,
     &:hover {
       text-decoration: none;
-      color: $secondary;
-      background: shift-color($secondary, $soft-bg-level);
+      //color: $secondary;
+      //  background: shift-color($secondary, $soft-bg-level);
     }
 
     .pc-h-badge {

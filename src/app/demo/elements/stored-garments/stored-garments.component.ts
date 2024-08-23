@@ -10,13 +10,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './stored-garments.component.scss'
 })
 export default class StoredGarmentsComponent {
-  folders = [{ name: 'Summer 2024' }, { name: 'Winter 2024' }, { name: 'Winter 2023' }, { name: 'Spring 2023' }];
+  imageUrl = '/assets/folder.svg';
 
   garments = [
     {
       imageUrl: '/assets/tshirt.svg ',
       name: 'Summer 2024 T-Shirt',
-      tags: ['Cotton', 'Casual', 'Summer']
+      tags: ['Cotton', 'Casual', 'Summer'],
+      isAIGenerated: true
+    },
+    {
+      imageUrl: '/assets/tshirt.svg ',
+      name: 'Summer 2024 T-Shirt',
+      tags: ['Cotton', 'Casual', 'Summer'],
+      isAIGenerated: false
     }
   ];
 }

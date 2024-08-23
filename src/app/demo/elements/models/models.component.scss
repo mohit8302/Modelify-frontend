@@ -1,34 +1,34 @@
 .models-container {
-  font-family: 'Jost', sans-serif;
   padding: 20px;
 }
 
 .navbar {
   font-size: 20px;
+  font-weight: bold;
   margin-bottom: 20px;
-}
-
-.material-symbols-outlined {
-  margin-top: 5px;
-}
-
-.custom-button .material-symbols-outlined {
-  margin-left: 8px; /* Space between text and icon */
-  font-size: 20px; /* Icon size */
 }
 
 .filter-container {
   display: flex;
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.filter-section {
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: center;
 }
+
 ng-select {
   width: 180px; /* Set your desired width */
 }
 
 /* Custom Button */
-.custom-button {
+.create-button {
   display: flex;
   align-items: center;
   background-color: #000000;
@@ -42,21 +42,19 @@ ng-select {
   white-space: nowrap;
 }
 
-.custom-button .material-symbols-outlined {
-  margin-left: 5px;
+.create-button .material-symbols-outlined {
+  margin: 5px 0 0 5px;
 }
 
-.custom-button:hover {
+.create-button:hover {
   background-color: #000000;
 }
 
+
 .model-card {
-  display: flex;
   background-color: #f1f1f1;
   border-radius: 8px;
   padding: 20px;
-  margin: 20px;
-  align-items: flex-start;
 }
 
 .model-image img {
@@ -75,55 +73,70 @@ ng-select {
   font-size: 2rem;
 }
 
-.model-details p,
-.model-extra p {
+.country {
   margin: 0;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-weight: 100;
   color: gray;
-  font-weight: bold;
 }
 
 .badge {
   display: inline-block;
-  background-color: lightgray;
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin-top: 10px;
+  padding: .35em .65em;
+  font-size: .75em;
+  font-weight: 700;
+  line-height: 1;
+  background-color: #6f6f6f;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
 }
 
-.attribute {
+.model-details .attribute {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.model-extra .attribute {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.attribute-container {
+  display: flex;
+  gap: 30px;
 }
 
 .attribute label {
   font-weight: bold;
-  font-size: 1rem;
-}
-
-.attribute .value {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 4px;
-  margin-top: 5px;
-  width: 130px;
-  font-size: 1rem;
-  color: white;
+  font-size: 0.7rem;
 }
 
 .skin-color {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
   background-color: #f0d5be;
-  color: black;
 }
 
 .eye-color {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: white;
   background-color: #4682b4;
 }
 
-.body-type,
-.image-type {
+.attribute-value {
   font-weight: bold;
   font-size: 1.5rem;
-  margin-top: 10px;
+  color: #222;
 }
 
 .description {
@@ -138,36 +151,66 @@ ng-select {
   justify-content: space-between;
 }
 
-.model-extra button {
-  margin-top: 10px;
-  width: 100%;
-  max-width: 150px;
-  background-color: #222;
-  height: 40px;
-  border-radius: 5px;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  transition:
-    background-color 0.3s,
-    color 0.3s;
-}
-
-.model-extra button:hover {
-  background-color: white;
-  color: #222;
-}
-
-.skin-eye-color,
-.body-image-type,
 .model-clothing-type {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-.use-edit-btn {
+
+.btn-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   align-items: flex-end;
+
+  .btn-save,
+  .btn-generate {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 65%;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-save:hover,
+  .btn-generate:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .btn-save:active,
+  .btn-generate:active {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .filter-container{
+    flex-direction: column;
+  }
+
+  .model-extra .attribute {
+    align-items: flex-start;
+  }
+
+  .model-clothing-type{
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .btn-container {
+    align-items: center;
+
+  }
 }

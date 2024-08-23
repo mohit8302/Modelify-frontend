@@ -28,6 +28,7 @@ import { IMAGE_LOADER } from '@angular/common';
 import { ModelService } from './demo/elements/models/model.service';
 import { NgSelectModule } from '@ng-select/ng-select';
 import ResultLabelComponent from './demo/elements/result-label/result-label.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import ResultLabelComponent from './demo/elements/result-label/result-label.comp
     MatSelectModule,
     MatFormFieldModule,
     NgSelectModule,
-    ResultLabelComponent
+    ResultLabelComponent,
+    MatDialogModule
   ],
   providers: [NavigationItem, ModelService],
 

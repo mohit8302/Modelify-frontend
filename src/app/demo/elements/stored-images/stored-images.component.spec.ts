@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { StoredGarmentsComponent } from './stored-garments.component';
+import { StoredImagesComponent } from './stored-images.component';
 
-describe('StoredGarmentsComponent', () => {
-  let component: StoredGarmentsComponent;
-  let fixture: ComponentFixture<StoredGarmentsComponent>;
+describe('StoredImagesComponent', () => {
+  let component: StoredImagesComponent;
+  let fixture: ComponentFixture<StoredImagesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [StoredGarmentsComponent]
+      imports: [StoredImagesComponent]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(StoredGarmentsComponent);
+    fixture = TestBed.createComponent(StoredImagesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

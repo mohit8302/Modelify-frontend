@@ -18,10 +18,7 @@ export class AdminComponent {
   windowWidth: number;
 
   // Constructor
-  constructor(
-    private location: Location,
-    private locationStrategy: LocationStrategy
-  ) {
+  constructor(private location: Location, private locationStrategy: LocationStrategy) {
     this.berryConfig = BerryConfig;
 
     let current_url = this.location.path();
